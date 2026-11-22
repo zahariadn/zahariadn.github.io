@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nikos Zachariades · Technical Product Owner</title>
+<meta name="description" content="CV of Nikos Zachariades, Technical Product Owner with over 13 years in enterprise software for the maritime industry.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<style>
+/* Layout: one A4 sheet (210mm, 15mm margins) on a desk; screen shows page-break guides and draft notes, print shows only the sheet. */
+:root {
+  --desk: #e7ebee;
+  --paper: #ffffff;
+  --ink: #1b2429;
+  --muted: #5a6870;
+  --rule: #d3dade;
+  --accent: #1d5466;       /* deep harbour blue */
+  --accent-soft: #e4eef1;
+  --flag: #b5631a;         /* draft markers, screen only */
+  --flag-soft: #fbf0e4;
+  --ok: #2f7a4a;
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --desk: #0f1417; --paper: #182025; --ink: #e3e9ec; --muted: #9aa8b0; --rule: #2d3940;
+    --accent: #7fc0d3; --accent-soft: #1f3640; --flag: #e9a25f; --flag-soft: #33271b; --ok: #6cc28c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --desk: #0f1417; --paper: #182025; --ink: #e3e9ec; --muted: #9aa8b0; --rule: #2d3940;
+  --accent: #7fc0d3; --accent-soft: #1f3640; --flag: #e9a25f; --flag-soft: #33271b; --ok: #6cc28c;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--desk);
+  color: var(--ink);
+  font-family: var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 24px 48px;
+}
+
+/* ---------- Draft panel (screen only) ---------- */
+.draft {
+  max-width: 210mm; margin: 0 auto 20px;
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 6px;
+  padding: 16px 20px; font-size: 13.5px; line-height: 1.5;
+}
+.draft-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.draft h2 { font-family: var(--font-display); font-weight: 600; font-size: 17px; margin: 0; }
+.fit { font-size: 12.5px; font-weight: 500; padding: 3px 10px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); font-variant-numeric: tabular-nums; }
+.fit.over { background: var(--flag-soft); color: var(--flag); }
+.fit.ok { color: var(--ok); }
+.draft p { margin: 8px 0 0; color: var(--muted); max-width: 70ch; }
+.draft ol { margin: 10px 0 0; padding-left: 22px; display: grid; gap: 6px; }
+.draft li::marker { color: var(--flag); font-weight: 600; }
+.draft li { max-width: 78ch; }
+
+/* ---------- The sheet ---------- */
+.sheet {
+  position: relative;
+  width: 100%; max-width: 210mm; margin: 0 auto;
+  background: var(--paper);
+  padding: 15mm;
+  box-shadow: 0 1px 3px rgb(0 0 0 / .08), 0 8px 30px rgb(0 0 0 / .06);
+  font-size: 9.4pt; line-height: 1.42;
+}
+@media (max-width: 640px) { .sheet { padding: 20px 18px; } }
+
+a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 2px; }
+
+header.cv-head { display: grid; gap: 4px; padding-bottom: 10px; border-bottom: 1.5px solid var(--accent); }
+.name { font-family: var(--font-display); font-weight: 600; font-size: 25pt; line-height: 1.05; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+.role { font-size: 11pt; color: var(--accent); font-weight: 500; margin: 0; }
+.contact { display: flex; flex-wrap: wrap; gap: 2px 14px; margin: 4px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 9pt; }
+
+section { margin-top: 13px; }
+h2.sec {
+  font-family: var(--font-body); font-size: 8.4pt; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 7px; display: flex; align-items: center; gap: 10px;
+}
+h2.sec::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+.summary { margin: 0; max-width: none; }
+
+.job { break-inside: avoid; }
+.job + .job { margin-top: 11px; }
+.job-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 12px; }
+.job-title { font-weight: 600; font-size: 10.2pt; margin: 0; }
+.org { color: var(--muted); font-weight: 400; }
+.when { color: var(--muted); font-size: 8.8pt; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.job-intro { margin: 2px 0 0; }
+.job-intro.note { font-style: italic; font-size: 8.9pt; color: var(--muted); }
+ul.pts { margin: 4px 0 0; padding-left: 14px; display: grid; gap: 2px; }
+ul.pts li::marker { color: var(--accent); }
+blockquote.appraisal {
+  margin: 6px 0 0; padding: 0 0 0 10px; border-left: 2px solid var(--accent-soft);
+  font-style: italic; color: var(--muted); font-size: 8.9pt;
+}
+blockquote.appraisal cite { font-style: normal; font-size: 8.2pt; white-space: nowrap; }
+
+.earlier { margin: 0; display: grid; gap: 2px; }
+.earlier div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 12px; }
+
+.edu { display: grid; gap: 8px; }
+.edu-item { break-inside: avoid; }
+.edu-item p { margin: 1px 0 0; }
+
+.certs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; }
+.certs li { break-inside: avoid; min-width: 0; }
+.cert-name { font-weight: 500; }
+.cert-meta { color: var(--muted); font-size: 8.8pt; }
+.cert-link { font-size: 8pt; color: var(--accent); margin-left: 4px; }
+
+.skills { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; }
+.skills dt { font-weight: 600; }
+.skills dd { margin: 0; min-width: 0; }
+
+@media (max-width: 560px) {
+  .certs { grid-template-columns: 1fr; }
+  .skills { grid-template-columns: 1fr; }
+  .skills dd { margin-bottom: 6px; }
+}
+
+/* Draft markers: things I assumed or need you to confirm (screen only) */
+.q { background: var(--flag-soft); border-bottom: 1.5px dotted var(--flag); border-radius: 2px; }
+.q::after { content: attr(data-n); font-size: 0.7em; font-weight: 600; color: var(--flag); vertical-align: super; margin-left: 1px; font-style: normal; }
+
+/* Page-break guides (screen only) */
+.guide { position: absolute; left: 0; right: 0; border-top: 1.5px dashed var(--flag); pointer-events: none; }
+.guide span { position: absolute; right: 6px; top: -9px; background: var(--paper); color: var(--flag); font-size: 10px; font-weight: 600; padding: 0 6px; letter-spacing: .04em; text-transform: uppercase; }
+
+/* ---------- Print ---------- */
+@page { size: A4; margin: 15mm; }
+@media print {
+  html:root:not(.x) { --paper: #fff; --ink: #1b2429; --muted: #5a6870; --rule: #d3dade; --accent: #1d5466; --accent-soft: #e4eef1; color-scheme: light; }
+  body { background: #fff; padding: 0; }
+  .draft, .guide { display: none !important; }
+  .sheet { box-shadow: none; padding: 0; max-width: none; }
+  .q { background: none; border: 0; }
+  .q::after { content: none; }
+  a { text-decoration: none; }
+}
+
+/* Website toolbar and certificate links */
+.toolbar { max-width: 210mm; margin: 0 auto 12px; display: flex; justify-content: flex-end; }
+.toolbar button {
+  font: 500 13px/1 var(--font-body); color: var(--accent); background: var(--paper);
+  border: 1px solid var(--rule); border-radius: 6px; padding: 9px 14px; cursor: pointer;
+}
+.toolbar button:hover { border-color: var(--accent); }
+.toolbar button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.cert-name a { text-decoration: underline; text-decoration-color: var(--rule); }
+.cert-name a::after { content: " \2197"; font-size: .8em; color: var(--accent); }
+@media print { .toolbar { display: none !important; } .cert-name a::after { content: none; } }
+</style>
+</head>
+<body>
+<div class="toolbar"><button type="button" id="print">Print or save as PDF</button></div>
+
+<main class="sheet" id="sheet">
+  <header class="cv-head">
+    <h1 class="name">Nikos Zachariades</h1>
+    <p class="role">Technical Product Owner</p>
+    <ul class="contact">
+      <li>Limassol, Cyprus</li>
+      <li><span class="obf" data-kind="tel" data-v="148833 99 753+">Phone on request</span></li>
+      <li><span class="obf" data-kind="mailto" data-v="moc.liamg@ndairahaz">Email on request</span></li>
+      <li><a href="https://www.linkedin.com/in/nikos-zachariades/">linkedin.com/in/nikos-zachariades</a></li>
+    </ul>
+  </header>
+
+  <section>
+    <h2 class="sec">Profile</h2>
+    <p class="summary">I've worked in enterprise software for the maritime industry for over 13 years as a software developer, and moved into product ownership in 2026. My hands-on experience covers designing and delivering solutions across areas including crewing, payroll and payments. I'm comfortable discussing architecture with engineers and business value with stakeholders, and turning both into a backlog a team can deliver.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Experience</h2>
+
+    <article class="job">
+      <div class="job-head">
+        <h3 class="job-title">Product Owner <span class="org">· SmartSea Ltd (SITA / Columbia Group), Limassol</span></h3>
+        <span class="when">Jan 2026 – Present</span>
+      </div>
+      <p class="job-intro">Product Owner for the Crewing domain, leading a newly formed Scrum team.</p>
+      <ul class="pts">
+        <li>Built the Crewing backlog and roadmap from scratch, running stakeholder discovery sessions and mapping crewing business processes.</li>
+        <li>Break business epics into technical user stories with clear acceptance criteria for the team to deliver.</li>
+        <li>Keep the backlog refined, estimated and prioritised, weighing commercial features against technical debt and stability.</li>
+        <li>Assess the feasibility of designs with the software architect and senior Mendix developer, and manage cross-team dependencies with the Platform Owner to keep the product aligned with the platform architecture.</li>
+        <li>In parallel, led the development team of the group's core operational system through the organisation's transformation, keeping a business-critical domain stable and on target while onboarding new developers through knowledge transfer and documentation.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3 class="job-title">Senior Software Developer <span class="org">· BlueDynamics Ltd / SmartSea Ltd, Limassol</span></h3>
+        <span class="when">Apr 2018 – Dec 2025</span>
+      </div>
+      <p class="job-intro note">Transferred from BlueDynamics (Columbia Group) to SmartSea, formed by SITA and Columbia Group, in June 2024.</p>
+      <ul class="pts">
+        <li>Developed new features and integrations for Columbia Group's core operational system on Microsoft Dynamics AX, across modules including crewing, payroll, payments and technical.</li>
+        <li>Designed solutions for complex requirements and built .NET applications integrated with the core system.</li>
+        <li>Mentored junior developers and ran code reviews; promoted coding standards.</li>
+        <li>Provided 2nd and 3rd level support, resolving complex production issues with the support coordinator.</li>
+        <li>Owned user security setup and administration, and the maintenance of system interfaces.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3 class="job-title">Business Software Analyst <span class="org">· SOFTimpact Ltd, Limassol</span></h3>
+        <span class="when">Feb 2013 – Mar 2018</span>
+      </div>
+      <ul class="pts">
+        <li>Designed and developed new functionality for the company's ship management solution on Microsoft Dynamics AX (X++), across the full development cycle.</li>
+        <li>Built banking interfaces, SSRS reports and web services.</li>
+        <li>Led data migrations of large datasets from legacy systems, and handled deployments to acceptance and production.</li>
+        <li>Visited customers on site for training and requirements gathering, and provided daily support.</li>
+        <li>Built deep domain knowledge of maritime crewing and payroll processes.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head"><h3 class="job-title">Earlier</h3></div>
+      <div class="earlier">
+        <div><span>ECDL Teacher · KIE, State Institute for Further Education, Limassol</span><span class="when">2012 – 2013</span></div>
+        <div><span>Volunteer Student Researcher · ICS-FORTH, Crete</span><span class="when">2010 – 2011</span></div>
+        <div><span>Sergeant · Compulsory military service, Cypriot National Guard</span><span class="when">2004 – 2006</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2 class="sec">Certifications</h2>
+    <ul class="certs">
+      <li><div class="cert-name"><a href="certificates/icp-apo.pdf" target="_blank" rel="noopener">ICP-APO · Agile Product Ownership</a></div><div class="cert-meta">ICAgile · Mar 2026</div></li>
+      <li><div class="cert-name"><a href="certificates/icp-pdm.pdf" target="_blank" rel="noopener">ICP-PDM · Product Management</a></div><div class="cert-meta">ICAgile · Mar 2026</div></li>
+      <li><div class="cert-name"><a href="certificates/agile-scrum-corporate.pdf" target="_blank" rel="noopener">Agile &amp; Scrum Corporate</a></div><div class="cert-meta">School of Certified Professionals · Nov 2026</div></li>
+      <li><div class="cert-name"><a href="certificates/microsoft-certified-professional.pdf" target="_blank" rel="noopener">Microsoft Certified Professional</a></div><div class="cert-meta">Microsoft · May 2015</div></li>
+      <li><div class="cert-name"><a href="certificates/ax2012-development-introduction.pdf" target="_blank" rel="noopener">Dynamics AX 2012 Development Introduction</a></div><div class="cert-meta">Microsoft Certified Technology Specialist · May 2015</div></li>
+      <li><div class="cert-name"><a href="certificates/ax2012-installation-configuration.pdf" target="_blank" rel="noopener">Dynamics AX 2012 Installation &amp; Configuration</a></div><div class="cert-meta">Microsoft Certified Technology Specialist · Jul 2015</div></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="sec">Education</h2>
+    <div class="edu">
+      <div class="edu-item">
+        <div class="job-head">
+          <h3 class="job-title">MSc Advanced Computer Science: Data &amp; Knowledge Management <span class="org">· University of Manchester, UK</span></h3>
+          <span class="when">2011 – 2012</span>
+        </div>
+        <p>Distinction. Dissertation: a database system for managing and integrating biochemical networks, using a Neo4j graph database and RESTful (JAX-RS) services.</p>
+      </div>
+      <div class="edu-item">
+        <div class="job-head">
+          <h3 class="job-title">BSc Computer Science <span class="org">· University of Crete, Greece</span></h3>
+          <span class="when">2006 – 2011</span>
+        </div>
+        <p>Very Good (6.62/10). Thesis: evaluating Top-K query processing algorithms over peer-to-peer networks (9.5/10).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Skills</h2>
+    <dl class="skills">
+      <dt>Product</dt>
+      <dd>Backlog management and refinement, product roadmaps, stakeholder discovery, business process mapping, user stories and acceptance criteria, Scrum, technical debt prioritisation</dd>
+      <dt>Domain</dt>
+      <dd>Maritime and ship management, ERP systems, payroll and payment integrations</dd>
+      <dt>Technical</dt>
+      <dd>Microsoft Dynamics AX / X++, C# / .NET, SQL Server / T-SQL, SSRS, API and web service integrations, data migration, Git / GitLab, Jira, Mendix (low-code)</dd>
+      <dt>Languages</dt>
+      <dd>Greek (native), English (fluent)</dd>
+    </dl>
+  </section>
+</main>
+
+<script>
+document.getElementById('print').addEventListener('click', function () { window.print(); });
+// Contact details are stored reversed and assembled here, so simple scrapers reading the HTML don't find them.
+document.querySelectorAll('.obf').forEach(function (el) {
+  const value = el.dataset.v.split('').reverse().join('');
+  const a = document.createElement('a');
+  a.href = el.dataset.kind + ':' + value.replace(/\s/g, '');
+  a.textContent = value;
+  el.replaceChildren(a);
+});
+
+</script>
+</body>
+</html>
