@@ -169,6 +169,12 @@ blockquote.appraisal cite { font-style: normal; font-size: 8.2pt; white-space: n
 .li-icon { width: 1.25em; height: 1.25em; fill: var(--accent); flex: none; }
 .print-only { display: none; }
 @media print { .screen-only, .li-icon { display: none !important; } .print-only { display: inline; } }
+
+/* Print: keep section headings with their content */
+@media print {
+  h2.sec { break-after: avoid; page-break-after: avoid; }
+  section:has(.certs), section:has(.edu), section:has(.skills) { break-inside: avoid; page-break-inside: avoid; }
+}
 </style>
 </head>
 <body>
